@@ -36,7 +36,10 @@ To configure we need kubectl. To download and install please visit https://docs.
 - terraform output kubeconfig > ~ /.kube/config (Need to edit "~/.kube/config" to get rid of first and last line)
 - kubectl cluster-info
 
+For more information visit https://learn.hashicorp.com/tutorials/terraform/eks
+
 ### Install ArgoCD in EKS cluster
+
 - kubectl create namespace argocd - To create a seperate namespace 
 - kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml - To install 
 - kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}' - To expose service to outside
