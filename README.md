@@ -27,22 +27,22 @@ To configure we need kubectl. To download and install please visit https://docs.
 
 ### 6. Install EKS with Terraform 
 - Login to AWS by using aws cli 
-- git clone https://github.com/hashicorp/terraform-provider-aws.git
-- cd terraform-provider-aws/examples/eks-getting-started
-- terraform init
+- ```sh git clone https://github.com/hashicorp/terraform-provider-aws.git ```
+- ```sh cd terraform-provider-aws/examples/eks-getting-started ```
+- ```sh terraform init ```
 - Change accourding to your need in .tf files
-- terraform plan 
+- ```sh terraform plan ```
 - terraform apply and yes for confirmation
-- mkdir ~/.kube && touch ~/.kube/config
-- terraform output kubeconfig > ~ /.kube/config (Need to edit "~/.kube/config" to get rid of first and last line)
-- kubectl cluster-info
+- ```sh mkdir ~/.kube && touch ~/.kube/config ```
+- ```sh terraform output kubeconfig > ~ /.kube/config ```(Need to edit "~/.kube/config" to get rid of first and last line)
+- ```sh kubectl cluster-info ```
 
 For more information visit https://learn.hashicorp.com/tutorials/terraform/eks
 
 ### 7. Install ArgoCD in EKS cluster
 
-- kubectl create namespace argocd - To create a seperate namespace 
-- kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml - To install 
+- ```sh kubectl create namespace argocd ```- To create a seperate namespace 
+- ```sh kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml ```- To install 
 - kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}' - To expose service to outside
 - kubectl get svc argocd-server -n argocd | awk '{print $4}' - To get the url for ArgoCD login page
 - kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2 - To get name of the ArgoCD pod
