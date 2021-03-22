@@ -28,7 +28,7 @@ To configure we need kubectl. To download and install please visit https://docs.
 ### 6. Install EKS with Terraform 
 - Login to AWS by using aws cli 
 - git clone https://github.com/hashicorp/terraform-provider-aws.git
-- cd /terraform-provider-aws/examples/eks-getting-started
+- cd terraform-provider-aws/examples/eks-getting-started
 - terraform init
 - Change accourding to your need in .tf files
 - terraform plan 
