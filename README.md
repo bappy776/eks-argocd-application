@@ -2,6 +2,13 @@
 
 This Repository will guide you to install EKS cluster by terraform. Then Deploy ArgoCD in EKS cluster. With ArgoCD will build an CD pipeline to deploy multi tier application from github repository. 
 
+## Diagram
+#### Whole Project
+![image](https://user-images.githubusercontent.com/10797214/112086481-6a763900-8be0-11eb-9448-c64c5d0412e7.png)
+
+#### Diagram from ArgoCD
+![image](https://user-images.githubusercontent.com/10797214/112086648-b628e280-8be0-11eb-893b-33f656ed6eb4.png)
+
 ### Requirements
 - gitcli and github
 - aws account
