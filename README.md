@@ -45,7 +45,7 @@ To configure EKS we need kubectl. To download and install please visit https://d
 - ``` terraform init ```
 - Change accourding to your need in .tf files
 - ``` terraform plan ```
-- terraform apply and yes for confirmation
+- ``` terraform apply``` and yes for confirmation
 - ``` mkdir ~/.kube && touch ~/.kube/config ```
 - ``` terraform output kubeconfig > ~/.kube/config ```(Need to edit "~/.kube/config" to get rid of first and last line)
 - ``` kubectl cluster-info ```
