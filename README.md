@@ -69,7 +69,4 @@ Here I am trying to host my application in github. So anything i will change my 
 - Log in to argoCD with cli
 - I have created a public repo in https://github.com/bappy776/3-tier-application and yaml folder got all my deployment. I would recommend to use private repo for security purpose.
 - ``` argocd app create argocd-wordpress --repo https://github.com/bappy776/3-tier-application --path yaml --dest-namespace default --dest-server https://kubernetes.default.svc --project default --sync-policy auto --self-heal ``` - To create an application in ArgoCD, connect the application with github repo for CD. Anything change in Github repo will take effect in EKS cluster deployment.
-
-
-
-
+-  ``` kubectl get svc wordpress | awk '{print$4}' ``` - To get that wordpress application url to login
